@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.skin *::before,
+.skin *::after {
+  box-sizing: border-box;
+}
+
+#demo {
+  bottom: 0;
+  top: 0;
+  left: 10px;
+  width: 100%;
+  height: 40vh;
+  z-index: 1;
+  overflow-y: auto;
+}
+#demo::-webkit-scrollbar {
+  display: none;
+}
+#demo2 {
+  display: none;
+}
+#html {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#buttons {
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin-right: 10px;
+  margin-top: 10px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+#buttons > button {
+  margin-bottom: 10px;
+  padding: 4px 8px;
+}
+.morty {
+  background: rgb(37, 42, 56);
+  width: 100%;
+  position: relative;
+  z-index: -10;
+  height: 60vh;
+}
+input{
+  display: none;
+}
+.icon {
+  display: none;
+}
+input:checked + label span {
+  left: 84px;
+  transform: rotate(360deg);
+  background: rgb(181, 212, 229);
+  border-radius: 50%;
+}
+input:checked ~ .face .eye {
+  border: 2px solid black;
+  height: 90px;
+  width: 90px;
+  position: absolute;
+  border-radius: 50%;
+  border-top-color: transparent;
+  background: white;
+  top: 40px;
+  background: linear-gradient(
+    to bottom,
+    rgb(236, 195, 162),
+    46%,
+    #222 45%,
+    #222 48%,
+    #fff 48%
+  );
+}
+input:checked ~ .face .eye.left {
+  margin-left: 20px;
+}
+input:checked ~ .face .eye::before {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 3px;
+  background: rgb(236, 195, 162);
+  left: 30px;
+  top: -2px;
+}
+input:checked ~ .face .eye.right {
+  margin-left: 135px;
+}
+input:checked ~ .face .eye .eyeball {
+  border: 2px solid black;
+  height: 9px;
+  width: 9px;
+  position: relative;
+  background: black;
+  border-radius: 50%;
+  left: 40px;
+  top: 39px;
+}
+input:checked ~ .face .eyebrow {
+  position: absolute;
+  border: 2px solid black;
+  border-radius: 0;
+  width: 40px;
+  height: 20px;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+input:checked ~ .face .eyebrow.left {
+  left: 60px;
+  top: 30px;
+  transform: rotate(0);
+}
+input:checked ~ .face .eyebrow.right {
+  left: 150px;
+  top: 30px;
+  transform: rotate(0);
+}
+input:checked ~ .face .mouth {
+  border: 2px solid black;
+  background: transparent;
+  width: 100px;
+  height: 55px;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 180px;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+input:checked ~ .rainbow {
+  display: none;
+}
